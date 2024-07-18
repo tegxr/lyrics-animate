@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400..700&display=swap');
+
+.lyrics-container {
+  display: flex;
+  background: #ADD8E6;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.lyrics-text {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Anton', cursive;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.lyrics-text.show {
+    opacity: 1;
+  }
+
+.lyrics-text.fly-in-top-left {
+  animation: flyInTopLeft 0.5s forwards;
+}
+
+.lyrics-text.fly-in-top-right {
+  animation: flyInTopRight 0.5s forwards;
+}
+
+.lyrics-text.fly-in-bottom-left {
+  animation: flyInBottomLeft 0.5s forwards;
+}
+
+.lyrics-text.fly-in-bottom-right {
+  animation: flyInBottomRight 0.5s forwards;
+}
+
+@keyframes flyInTopLeft {
+  0% {
+    transform: translate(-20%, -20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes flyInTopRight {
+  0% {
+    transform: translate(20%, -20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes flyInBottomLeft {
+  0% {
+    transform: translate(-20%, 20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes flyInBottomRight {
+  0% {
+    transform: translate(20%, 20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
